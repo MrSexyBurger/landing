@@ -1,0 +1,831 @@
+@font-face {
+	font-family: Akrobat;
+	src: url(../fonts/Akrobat.woff2)
+	format('woff2');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Akrobat;
+	src: url(../fonts/Akrobatbold.woff2)
+	format('woff2');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: geometrica_sans_regular;
+	src: url(../fonts/geometrica_sans_regular.woff2)
+	format('woff2');	
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+button{
+	outline: none;
+	cursor: pointer;
+}
+
+button:active{
+	filter: brightness(50%);
+}
+
+.underline{
+	text-decoration: underline;
+}
+
+#bg{
+	z-index: -10;
+	width: 100%;
+	height: 100%;
+	background: black;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+/*//////////////////////////header/////////////////////////////////////////*/
+.header{
+	background: black;
+	height: 85px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-wrap{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1100px;
+	width: calc(100% - 40px);
+}
+
+.nav-container{
+	display: flex;
+	animation-name: scale;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo{
+	height: 30px;
+}
+
+.pc-nav{
+	color: white;
+	font-family: "Akrobat";
+	font-weight: normal;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	transition: 0.3s ease;
+}
+
+.pc-nav:not(:last-child){
+	padding-right: 50px;
+}
+
+.pc-nav:hover{
+	color: #38fbff;
+}
+
+.call{
+	color: white;
+	font-family: 'Arial';
+	font-weight: bold;
+	font-size: 16px;
+	transition: 0.2s ease;
+}
+
+.call:before{
+	content: '';
+	display: inline-block;
+	position: relative;
+	top: 7px;
+	width: 22px;
+	height: 22px;
+	background: url(../img/header/phone_header.png);
+	background-size: cover;
+	background-position: center;
+}
+
+/*////////////////////////////////intro/////////////////////////////////////*/
+.intro__container {
+	opacity: 0;
+	transition: 1s ease;
+}
+
+.intro{
+	width: 100%;
+	height: 550px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.video{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+.intro-name{
+	top: 0;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 150px;
+	color: white;
+	font-family: Akrobat;
+	font-size: 30px;
+	font-weight: bold;
+	width: 100%;
+	height: 100px;
+}
+
+
+.intro-name > p:nth-of-type(1){
+	color: white;
+	font-family: Akrobat;
+	font-size: 52px;
+	font-weight: bold;
+	letter-spacing: 5px;
+	text-align: center;
+	text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.intro-name > p:nth-of-type(2){
+	color: white;
+	font-family: Akrobat;
+	font-size: 19px;
+	font-weight: bold;
+	margin-top: 4px;
+	letter-spacing: 1px;
+	text-align: center;
+	text-shadow: 0 0 10px rgba(0,0,0,0.5);
+	width: 100%;
+}
+
+.order{
+	display: block;
+	width: 190px;
+	background-color: #38fbff;
+	background-image: url(../img/intro/camera_logo.png);
+	background-position: -100% 50% ;
+	background-size: 110%;
+	position: absolute;
+	top: 310px;
+	border: none;
+	border-radius: 6px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	padding: 10px 0px 10px 50px;
+	color: white;
+	font-family: Akrobat;
+	font-size: 16px;
+	letter-spacing: 1px;
+
+}
+
+
+/*/////////////////////about me/////////////////////////////////////////*/
+.about-me__container {
+	opacity: 0;
+	transition: 1s ease;
+}
+
+.about-me{
+	padding: 30px 20px;
+	box-sizing: border-box;
+	position: relative;
+	background: black;
+}
+
+.about-me > h1{
+	font-family: 'Akrobat';
+	text-align: center;
+	font-size: 40px;
+	color: white;
+	z-index: 1;
+}
+
+.about-me__wrap{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1140px;
+	position: relative;
+	margin: auto;	
+	margin-top: 50px;
+	z-index: 1;
+}
+
+.about-me__img__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 42%;
+}
+
+
+.about-me__img {
+	width: 100%;
+	background-image: url('../img/about_me/about_me_photo.png?a=1');
+	background-size: cover;
+	background-position: center;
+	box-shadow:inset 0px 0px 16px 16px rgba(0,0,0, 1); 
+}
+
+.about-me__text__container {
+	width: 38%;
+}
+
+.about-me__text {
+	font-family: 'geometrica_sans_regular';
+	letter-spacing: 0.1em;
+	line-height: 28px;
+	color: white;
+}
+
+.about-me__text> p:not(:last-of-type){
+	margin-bottom: 30px;
+}
+
+.about-me__text__adaptive {
+	font-family: 'geometrica_sans_regular';
+	letter-spacing: 0.1em;
+	line-height: 28px;
+	font-weight: bold;
+}
+
+.about-me__text__adaptive > p:not(:last-of-type){
+	margin-bottom: 30px;
+}
+
+
+.about-me__bg{
+	background: url(../img/about_me/playstation.png);
+	background-size: 15%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	opacity: 0.25;
+	animation-name: bg-animation;
+	animation-iteration-count: infinite;
+	animation-duration: 60s;
+	animation-timing-function: linear;
+	background-attachment: fixed;
+	animation-direction: alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 600px 600px;
+  }
+}
+
+/*///////////////////////////////advantages//////////////////////////////////////////*/
+
+.advantages__container {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.advantages {
+	background: url(../img/advantages/advantages-pic.png?a=1);
+	background-position: center;
+	background-size: cover;
+	padding-left: 20px;
+	padding-right: 20px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.advantages__itms {
+	height: 600px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1140px;
+}
+
+.advantages__i {
+	width: calc( 100%/3 );
+	max-width: 300px;
+	position: relative;
+	opacity: 1;
+	transition: all ease 1s;
+}
+
+.advantages__i:nth-child(2), .advantages__i:nth-child(5){
+	transform: scale(0.1);
+}
+
+.advantages__i:nth-child(1), .advantages__i:nth-child(4){
+	right: 200px;
+}
+
+.advantages__i:nth-child(3), .advantages__i:nth-child(6){
+	left: 200px;
+}
+
+/*////feedback//////*/
+
+.feedback__container {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.feedback{
+	background: url(../img/price/camera.jpg?a=1);
+	background-size: cover;
+	background-position: center;
+	box-sizing: border-box;
+	padding-top: 25px;
+	padding-bottom: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: 1s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.feedback> h1{
+	text-align: center;
+	font-family: 'Akrobat';
+	font-weight: 400;
+	font-size: 56px;
+	line-height: 1;
+}
+
+.feedback> h3{
+	text-align: center;
+	font-family: 'Akrobat';
+	font-weight: 400;
+	font-size: 27px;
+	color: white;
+	margin-top: 10px;
+}
+
+.feedback__form{
+	width: 100%;
+	max-width: 250px;
+	margin-top: 20px;
+}
+
+.feedback__form {
+	margin-top: 20px;
+}
+
+.feedback__form > label{
+	display: block;
+	font-family: 'arial';
+	font-size: 19px;
+	color: white;
+	margin-bottom: 5px;
+}
+
+.feedback__form > label:nth-of-type(2){
+	margin-top: 30px;
+}
+
+.feedback__form > input:not(:last-of-type){
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	outline: none;
+	border: 1px solid #EAEAEA;
+	border-radius: 1px;
+	width: 100%;
+	background: rgba(0,0,0,0.2);
+	box-sizing: border-box;
+}
+
+.calculate{
+	display: block;
+	width: 160px;
+	height: 45px;
+	background: #38fbff;
+	border: none;
+	border-radius: 6px;
+	margin: auto;
+	margin-top: 50px;
+	color: white;
+	font-family: Akrobat;
+	font-size: 20px;
+	letter-spacing: 2px;
+	transition: filter 0.3s ease;
+}
+
+.calculate:hover{
+	filter: brightness(0.9);
+	cursor: pointer;
+}
+
+/*////////////////////////portfolio/////////////////////////////////////////////////////*/
+
+.portfolio__container {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.portfolio {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url(../img/player/portfolio_pic.png?a=1);
+	background-position: center;
+	background-size: cover;
+	padding: 65px 30px 180px 30px;
+}
+
+.portfolio__title > h1 {
+	font-family: "Akrobat";
+	font-size: 56px;
+	letter-spacing: 2px;
+	text-align: center;
+	text-shadow: 0px 0px 100px #ffffff;
+}
+
+.portfolio__title > h2 {
+	font-family: "Open Sans";
+	font-size: 23px;
+	font-weight: normal;
+	text-align: center;
+	margin-top: 15px;
+	line-height: 1;
+	text-shadow: 0 0 17px white;
+}
+
+.portfolio__title >h3 {
+	font-family: "Open Sans";
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 15px;
+	text-shadow: 0 0 17px white;
+}
+
+.portfolio__itms {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1140px;
+}
+
+.portfolio__itm {
+	transform: scale(0);
+	transition: transform 1s ease;
+}
+
+
+.portfolio__itms > .portfolio__itm {
+	width: calc((100%/3) - 20px);
+	position: relative;
+	margin-top: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+
+
+.portfolio__itm__body {
+	background-image: url(../img/player/play5.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+}
+
+.portfolio__itm__body:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 60px;
+	height: 60px;
+	background-image: url('../img/portfolio/play-icon.png');
+	background-size: cover;
+	background-position: center;
+	transition: width 0.3s ease, height 0.3s ease;
+	z-index: 1;
+}
+
+.portfolio__itm__body:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: 0;
+}
+
+.portfolio__itm__body:hover {
+	cursor: pointer;
+} 
+
+.portfolio__itm__body:hover:before {
+	height: 70px;
+	width: 70px;
+}
+
+.portfolio__itm__body:hover:after {
+	opacity: 0.5;
+}
+
+.watch-more{
+	display: block;
+	background: #38fbff;
+	border: none;
+	border-radius: 6px;
+	color: white;
+	font-family: Akrobat;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin-top: 90px;
+	padding: 10px 20px;
+	filter: brightness(1);
+	transition: filter 0.3s ease;
+}
+
+.watch-more:hover{
+	filter: brightness(0.85);
+	cursor: pointer;
+}
+
+.white-grd{
+	  background: linear-gradient(to top, rgba(255,255,255,0.95), transparent);
+	  width: 100%;
+	  height: 140px;
+	  position: absolute;
+	  left: 0;
+	  bottom: 0;
+}
+
+/*//////////////////work with us////////////////////////////////////////*/
+
+.clients__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: white;
+	padding: 40px 0 80px 0;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.clients__container > h1 {
+	font-family: "Akrobat";
+	font-size: 45px;
+	font-weight: 400px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.clients__itms {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1140px;
+}
+
+.clients__i {
+	width: calc(100%/3);
+	height: 85px;
+	margin-top: 50px;
+	position: relative;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.clients__i__link {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+
+/*//////////////////footer//////////////////////////////////////////////////////*/
+.footer__container{
+	background: url(../img/footer/footer.png);
+	background-size: cover;
+	background-position: center;
+	padding: 20px 30px;
+}
+
+.footer{
+	position: relative;
+	padding: 80px 0px;
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-name__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.footer-name__title {
+	color: white;
+	font-family: "arial";
+	font-size: 36px;
+	letter-spacing: 1px;
+	width: 350px;
+	height: 72px;
+	background: url(../img/footer/camera_logo.png);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	line-height: 72px;
+	position: relative;
+	left: 10px;
+}
+
+.footer-name {
+	font-family: "Akrobat";
+	font-size: 24px;
+	line-height: 36px;
+	text-align: center;
+	color: white;
+}
+
+
+
+
+.footer-social{
+	width: 25%;
+}
+
+.vk-btn{
+	width: 40%;
+	max-width: 100px;
+}
+
+.call-btn{
+	width: 40%;
+	float: right;
+	max-width: 100px;
+}
+
+.logo-footer{
+	width: 25%;
+	max-width: 230px;
+}
+
+.GD-link{
+	display: inline-block;
+	color: #383838;
+	font-family: "Akrobat";
+	font-size: 14px;
+	font-weight: bold;
+	position: absolute;
+	transition: color 0.2s ease;
+	bottom: 0;
+	left: 0;
+}
+
+.GD-link:hover{
+	color: #7F7F7F;
+}
+
+
+
+
+
+/*player*/
+
+.player {
+	position: fixed;
+}
+
+
+.bg{
+	background-color: black;
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: -1;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1024px){
+	.portfolio__itms > .portfolio__itm {
+		width: calc(50% - 20px);
+	}
+}
+
+@media (max-width: 920px){
+	.nav-container{
+		display: none;
+	}
+
+}
+
+@media (max-width: 770px){
+	.header{
+		display: none;
+	}
+	
+	.intro{
+		display: none;
+	}
+	
+	.about-me{
+		display: none;
+	}
+	
+	.advantages{
+		display: none;
+	}
+	
+	.feedback{
+		display: none;
+	}
+	
+	.portfolio{
+		display: none;
+	}
+
+	.footer{
+		display: none;
+	}
+
+	.bg{
+		background-color: white;
+	}
+
+
+	.clients__container > h1 {
+		font-size: 27px;
+	}
+
+	.clients__i {
+		width: calc(50%);
+	}
+
+}

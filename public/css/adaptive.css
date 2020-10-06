@@ -1,0 +1,627 @@
+/*///////////////////////global//////////////////////////////////////////////////*/
+@font-face {
+	font-family: Akrobat;
+	src: url(../fonts/Akrobat.woff2)
+	format('woff2');
+}
+
+
+
+@font-face {
+	font-family: geometrica_sans_regular;
+	src: url(../fonts/geometrica_sans_regular.woff2)
+	format('woff2');	
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+button{
+	outline: none;
+	cursor: pointer;
+}
+
+button:active{
+	filter: brightness(50%);
+}
+
+.white{
+	width: 100%;
+	height: 100%;
+	background: white;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+/*////////////////////////header///////////////////////////////////////////*/
+.header__adaptive{
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6), rgba(0,0,0,0));
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+.burger-menu{
+	display: block;
+	width: 25px;
+	height: 25px;
+	font-size: 40px;
+	background: url(../img/header/burger_menu.png);
+	background-size: 100% 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+	position: absolute;
+	top: 25px;
+	left: 20px;
+	filter: brightness(0%) invert(1);
+	transition: opacity 0.2s ease;
+}
+
+.burger-menu:hover{
+	opacity: 0.5;
+}
+
+.call-adaptive{
+	display: block;
+	width: 25px;
+	height: 25px;
+	font-size: 40px;
+	background: url(../img/header/telephone.png);
+	background-size: cover;
+	border: none;
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	transition: opacity 0.2s ease;
+}
+
+.call:hover{
+	opacity: 0.5;
+}
+
+.logo-adaptive{
+	width: 50%;
+	max-width: 210px;
+	position: absolute;
+	top: 36px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transform: translateY(-50%);
+}
+.header-adaptive > a:hover{
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+
+.header-adaptive > a:hover{
+	opacity: 0.5;
+}
+
+/*//////////////////////////Intro////////////////////////////*/
+
+.intro__adaptive{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url(../img/intro/intro_mobile.jpg?a=1);
+	height: 715px;
+	background-size: cover;
+	background-position: center;
+	opacity: 1;
+	transition: opacity 1s ease;
+}
+
+.intro-name__adaptive {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 3px 10px 10px 20px;
+	background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+
+.intro-name__adaptive:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: white;
+	width: calc(100% - 20px);
+	height: 3px;
+}
+
+.intro-name__adaptive:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	width: calc(100% - 20px);
+	height: 3px;
+}
+
+.intro-name__top__adaptive {
+	color: white;
+	font-family: Akrobat;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+.intro-name__bottom__adaptive {
+	color: white;
+	font-family: Akrobat;
+	font-size: 19px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+/*
+#intro-adaptive{
+	position: relative;
+	background: url(../img/intro/intro_mobile.jpg?a=1);
+	height: 715px;
+	background-size: cover;
+	background-position: center;
+	opacity: 1;
+	transition: opacity 1s ease;
+}
+
+#intro-name-adaptive{
+	width: 320px;
+	height: 70px;
+	top: 210px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	background: url(../img/intro/text_lines_mobile.png),
+	linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,0));
+	background-size: cover, 100% 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#intro-name-adaptive::before{
+	content: 'Александр Лемов';
+	color: white;
+	font-family: Akrobat;
+	font-size: 30px;
+	font-weight: bold;
+	left: 32px;
+	position: absolute;
+	top: 3px;
+	letter-spacing: 5px;
+}
+
+#intro-name-adaptive::after{
+	content: 'Видеограф/Видеооператор';
+	color: white;
+	font-family: Akrobat;
+	font-size: 19px;
+	font-weight: bold;
+	left: 56px;
+	position: absolute;
+	top: 35px;
+	letter-spacing: 1px;
+}*/
+
+.order__adaptive{
+	display: block;
+	width: 250px;
+	padding: 20px 0;
+	padding-left: 60px;
+	background: #FF0000;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	font-family: Akrobat;
+	font-size: 24px;
+	letter-spacing: 1px;
+	background-image: url(../img/intro/camera.png);
+	background-position: 8% 50% ;
+	background-size: 15%;
+	background-repeat: no-repeat;
+	margin-top: 150px;
+}
+
+
+/*//////////////About me////////////////////////////////*/
+.about-me__adaptive{
+	position: relative;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px; 
+	box-sizing: border-box;
+	opacity: 1;
+	transition: 1s ease;
+}
+
+.about-me__adaptive__top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.about-me__img__adaptive {
+	width: 270px;
+	height: 210px;
+	margin-top: 10px;
+	background-position: center;
+	background-size: cover;
+	background-image: url('../img/about_me/about_me_photo_mobile.png?a=1');
+}
+
+.about-me__adaptive > h1{
+	font-family: 'Akrobat';
+	font-size: 36px;
+	letter-spacing: 3px;
+	margin-top: 10px;s
+}
+
+.underline{
+	height: 4px;
+	width: 14%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: black;
+}
+
+.about_me-adaptive > p{
+	font-family: 'geometrica_sans_regular';
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	line-height: 28px;
+	margin-bottom: 30px;
+}
+
+
+.about-me__adaptive > p:nth-of-type(3){
+	margin-bottom: 0;
+}
+
+/*//////////////////Advantages/////////////////////////////*/
+
+.advantages__adaptive{
+	padding-top: 80px;
+	padding-bottom: 20px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.advantages__itms__adaptive {
+	padding: 0 20px;
+	width: 100%;
+	max-width: 440px;
+}
+
+
+.advantages__i__adaptive {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	transition: all 1s ease;
+	position: relative;
+}
+
+.advantages__i__adaptive:nth-of-type(even){
+	justify-content: flex-end;
+	left: 200px;
+}
+
+.advantages__i__adaptive:nth-of-type(odd){
+	justify-content: flex-start;
+	right: 200px;
+}
+
+.advantages__i__adaptive > img {
+	position: relative;
+}
+
+.adv__img {
+	width: 100%;
+	max-width: 240px;
+	position: relative;
+	filter: invert(1);
+	transition: left ease 1s, opacity ease 1s .2s;
+	opacity: 1;
+}
+
+
+/*/////////////////Price////////////////////////////////////*/
+
+.feedback__adaptive{
+	background: url(../img/price/camera.jpg?a=1);
+	background-size: cover;
+	background-position: center;
+	box-sizing: border-box;
+	padding: 25px 20px;
+	opacity: 1;
+	transition: opacity 1s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.feedback__adaptive > h1{
+	text-align: center;
+	font-family: 'Akrobat';
+	font-weight: 400;
+	font-size: 42px;
+	line-height: 42px;
+}
+
+.feedback__adaptive > h3{
+	text-align: center;
+	font-family: 'Akrobat';
+	font-weight: 400;
+	font-size: 20px;
+	color: white;
+	margin-top: 10px;
+}
+
+.feedback__form__adaptive{
+	width: 100%;
+	max-width: 250px;
+	margin-top: 15px;
+}
+
+.feedback__form__adaptive > label{
+	display: block;
+	font-family: 'arial';
+	color: white;
+	margin-bottom: 5px;
+}
+
+.feedback__form__adaptive > label:nth-of-type(2){
+	margin-top: 25px;
+}
+
+.feedback__form__adaptive > input:not(:last-child){
+	font-size: 16px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 10px;
+	outline: none;
+	border: 1px solid #EAEAEA;
+	border-radius: 1px;
+	width: 100%;
+	background: rgba(0,0,0,0.2);
+	box-sizing: border-box;
+}
+
+.calculate__adaptive{
+	display: block;
+	width: 160px;
+	height: 45px;
+	background: #FF0000;
+	border: none;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 50px;
+	color: white;
+	font-family: Akrobat;
+	font-size: 20px;
+	letter-spacing: 2px;
+	transition: filter 0.3s ease;
+}
+
+.calculate__adaptive:hover{
+	filter: brightness(0.9);
+	cursor: pointer;
+}
+
+/*//////////////////////Portfolio///////////////////////////////////////*/
+
+.portfolio__adaptive {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.portfolio__adaptive > h1 {
+	font-family: 'Akrobat';
+	font-size: 27px;
+	letter-spacing: 2px;
+	text-align: center;
+	margin: 50px 0;
+}
+
+.portfolio__itms__adaptive {
+	padding: 0px 20px;
+	width: 100%;
+}
+
+.portfolio__itms__adaptive > .portfolio__itm {
+	width: 100%;
+	position: relative;
+	margin-top: 20px;
+}
+
+.watch-more__adaptive{
+	display: block;
+	background: #FF0000;
+	border: none;
+	border-radius: 10px;
+	margin-top: 40px;
+	margin-bottom: 25px;
+	color: white;
+	font-family: Akrobat;
+	font-size: 20px;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	filter: brightness(1);
+	transition: filter 0.3s ease;
+}
+
+.watch-more__adaptive:hover{
+	filter: brightness(0.9);
+	cursor: pointer;
+}
+
+
+/*////////////footer////////////////*/
+
+.footer__adaptive{
+	padding-top: 50px;
+	padding-bottom: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-name__container__adaptive {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.footer-name__title__adaptive {
+	color: white;
+	font-family: "arial";
+	font-size: 20px;
+	letter-spacing: 1px;
+	width: 200px;
+	height: 40px;
+	background: url(../img/footer/camera_logo.png);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	line-height: 40px;
+	position: relative;
+	left: 5px;
+}
+
+.footer-name__adaptive {
+	font-family: "Akrobat";
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	color: white;
+}
+
+.footer-social__adaptive{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 300px;
+	margin: auto;
+	margin-top: 45px;
+}
+
+.footer-social__adaptive > a:first-child{
+	margin-right: 20px;
+}
+
+.vk-btn__adaptive{
+	display: block;
+	width: 100%;
+	max-width: 100px;
+}
+
+.call-btn__adaptive{
+	display: block;
+	width: 100%;
+	max-width: 100px;
+}
+
+.logo-footer__adaptive{
+	margin-top: 35px;
+	max-width: 250px;
+}
+
+.up__adaptive{
+	display: inline;
+	width: 50px;
+	height: 35px;
+	background: url(../img/footer/backtotop.png);
+	background-position: center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	border: none;
+	margin-right: 20px;
+	margin-top: 35px;
+	transition: opacity 0.2s ease;
+}
+
+.up__adaptive:hover{
+	opacity: 0.8;
+}
+
+.GD-link__adaptive{
+	display: inline-block;
+	color: #383838;
+	font-family: "Akrobat";
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 35px;
+	position: relative;
+	top: -10px;
+	transition: color 0.2s ease;
+}
+
+.GD-link__adaptive:hover{
+	color: #7F7F7F;
+}
+/*//////////////////////////////////////////////////////////*/
+
+@media (min-width: 771px){
+	.header__adaptive{
+		display: none;
+	}
+
+	.intro__adaptive{
+		display: none;
+	}
+
+	.about-me__adaptive{
+		display: none;
+	}
+
+	.advantages__adaptive{
+		display: none;
+	}
+
+	.feedback__adaptive{
+		display: none;
+	}
+
+	.portfolio__adaptive{
+		display: none;
+	}
+
+	.footer__adaptive{
+		display: none;
+	}
+}

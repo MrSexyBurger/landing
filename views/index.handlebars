@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lemov studio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/adaptive.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/player.css">
+	<link rel="stylesheet" type="text/css" href="css/dev.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/editor.js"></script>
+	<script type="text/javascript" src="js/mailer.js"></script>
+	<script type="text/javascript" src="js/portfolio.js"></script>
+	<script type="text/javascript" src="js/clients.js"></script>
+	<script type="text/javascript" src="js/logo.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/thankyou.js"></script>
+	<script type="text/javascript" src="js/admin.js"></script>
+</head>
+<body>
+
+	<div class="menu__container">
+		<div class="menu">
+			<div class="menu__top">
+				<button class="menu__close-btn"></button>
+			</div>
+			<nav class="menu__nav">
+				<a class="sliding-link" href="#header">главная</a>
+				<a class="sliding-link" href="#about-me">обо мне</a>
+				<a class="sliding-link" href="#portfolio">портфолио</a>
+				<a class="sliding-link" href="#footer">контакты</a>
+			</nav>
+		</div>
+	</div>
+	
+	<header>
+		<div class="header">
+			<div class="header-wrap">
+				<img class="logo" src="img/header/logo.png">
+				<nav class="nav-container">
+					<a class="pc-nav sliding-link" href="#header">главная</a>
+					<a class="pc-nav sliding-link" href="#about-me">обо мне</a>
+					<a class="pc-nav sliding-link" href="#portfolio">портфолио</a>
+					<a class="pc-nav sliding-link" href="#footer">контакты</a>
+				</nav>
+				<a class="call" href="tel: +89506153327"></a>
+			</div>
+		</div>
+		<div class="header__adaptive">
+			<button class="burger-menu"></button>
+			<img class="logo-adaptive" src="img/header/logo.png">
+			<a href="tel: +89506153327" class="call-adaptive"></a>
+		</div>
+	</header>
+
+	<main>
+		<div class="intro__container">
+			<div class="intro">
+				<video class="video" autoplay="autoplay" loop="loop" preload="auto" muted></video>
+				<div class="intro-name">
+					<p class="intro-name__top">Александр Лемов</p>
+					<p class="intro-name__bottom">Видеограф/Видеооператор</p>
+				</div>
+				<a class="order sliding-link" href="#feedback">Заказать съёмку</a>
+			</div>
+
+			<div class="intro__adaptive">
+				<div class="intro-name__adaptive">
+					<p class="intro-name__top__adaptive">Александр Лемов</p>
+					<p class="intro-name__bottom__adaptive">Видеограф/Видеооператор</p>
+				</div>
+				<a class="order__adaptive sliding-link" href="#feedback">Заказать съёмку</a>
+			</div>	
+		</div>
+
+		<div class="about-me__container" id="about-me">
+			<div class="about-me">
+				<h1>Обо мне</h1>
+				<div class="about-me__wrap">
+					<div class="about-me__text__container">
+						<div class="about-me__text"></div>
+					</div>
+					<div class="about-me__img__container">
+						<div class="about-me__img"></div>
+					</div>				
+				</div>
+				<div class="about-me__bg"></div>
+			</div>
+
+			<div class="about-me__adaptive">
+				<div class="about-me__adaptive__top">
+					<img src="/img/about_me/about_me_top.png">
+					<div class="about-me__img__adaptive"></div>
+				</div>
+				<h1>Обо мне</h1>
+				<div class="underline"></div>
+				<div class="about-me__text__adaptive"></div>
+			</div>
+		</div>
+
+		<div class="advantages__container">
+			<div class="advantages">
+				<div class="advantages__itms">
+					<img class="advantages__i" src="img/advantages/advantage_1.png">
+					<img class="advantages__i" src="img/advantages/advantage_2.png">
+					<img class="advantages__i" src="img/advantages/advantage_3.png">
+					<img class="advantages__i" src="img/advantages/advantage_4.png">
+					<img class="advantages__i" src="img/advantages/advantage_5.png">
+					<img class="advantages__i" src="img/advantages/advantage_6.png">
+				</div>
+				
+			</div>
+
+			<div class='advantages__adaptive'>
+				<div class="advantages__itms__adaptive">
+					<div class="advantages__i__adaptive"><img class="adv__img" src="img/advantages/advantage_1.png"></div>
+					<div class="advantages__i__adaptive"><img class="adv__img" src="img/advantages/advantage_4.png"></div>
+					<div class="advantages__i__adaptive"><img class="adv__img" src="img/advantages/advantage_2.png"></div>
+					<div class="advantages__i__adaptive"><img class="adv__img" src="img/advantages/advantage_3.png"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="feedback__container" id="feedback">
+			<div class="feedback">
+				<h1>Хотите узнать<br>cтоимость съемки?</h1>
+				<h3>Оставьте заявку!</h3>
+				<form action="mailer" method="POST" class="feedback__form">
+					<label for="name">Ваше имя:</label>
+					<input id="name" type="text" name="name">
+					<label for="phone">Ваш телефон:</label>
+					<input id="phone" type="text" name="phone">
+					<input type="submit" value="Рассчитать" class="calculate"></input>
+				</form>	
+			</div>
+
+			<div class="feedback__adaptive">
+				<h1>Хотите узнать<br>cтоимость съемки?</h1>
+				<h3>Оставьте заявку!</h3>
+				<form action="mailer" method="POST" class="feedback__form__adaptive">
+					<label for="name-adapt">Ваше имя:</label>
+					<input id="name-adapt" type="text" name="name">
+					<label for="phone-adapt">Ваш телефон:</label>
+					<input id="phone-adapt" type="text" name="phone">
+					<input type="submit" value="Рассчитать" class="calculate__adaptive"></input>
+				</form>
+			</div>
+		</div>
+
+		<div class="portfolio__container" id="portfolio">
+			<div class="portfolio">
+				<div class="portfolio__title">
+					<h1>Портфолио</h1>
+					<h2>Я подобрал несколько из наших работ для демонстрации качества наших услуг</h2>
+					<h3>Наслаждайтесь!</h3>
+				</div>
+				<div class="portfolio__itms"></div>
+				<a target="_blank" rel="noopener noreferrer" class="watch-more" href="https://www.youtube.com/">Смотреть больше</a>
+				<div class="white-grd"></div>
+			</div>
+
+			<div class="portfolio__adaptive">
+				<h1>Портфолио</h1>
+				<div class="portfolio__itms__adaptive"></div>
+				<a target="_blank" rel="noopener noreferrer" class="watch-more__adaptive" href="https://www.youtube.com/">Смотреть больше</a>
+			</div>
+			
+		</div>
+
+
+	<div class="clients__container">
+		<h1>С нами уже работали:</h1>
+		<div class="clients__itms"></div>
+	</div>
+
+
+	</main>
+
+	<footer class="footer__container" id="footer">
+		
+		<div class="footer">
+			<img class="logo-footer" src="img/footer/logo.png">
+			<div class="footer-name__container">
+				<div class="footer-name__title">Видеосъемка</div>
+				<div class="footer-name"></div>
+			</div>
+			<div class="footer-social">
+				<a target="_blank" rel="noopener noreferrer" class="vk__link" href="https://vk.com/"><img  class="vk-btn" src="img/footer/vk_logo.png"></a>
+				<a class="phone__big" href="tel: +89506153327"><img  class="call-btn" src="img/footer/call_logo.png"></a>
+			</div>
+			<a class="GD-link" href="#">Создание сайта- <span class="underline">GrandDesign</span></a>
+		</div>
+		
+
+
+
+
+		<div class="footer__adaptive">			
+			<div class="footer-name__container__adaptive">
+				<div class="footer-name__title__adaptive">Видеосъемка</div>
+				<div class="footer-name__adaptive"></div>
+			</div>
+
+			<div class="footer-social__adaptive">
+				<a target="_blank" rel="noopener noreferrer" class="vk__link" href="https://vk.com/"><img  class="vk-btn__adaptive" src="img/footer/vk_logo.png"></a>
+				<a class="phone__big" href="tel: +89506153327"><img  class="call-btn__adaptive" src="img/footer/call_logo.png"></a>
+			</div>
+			<img class="logo-footer__adaptive" src="img/footer/logo.png?">
+			<button class="up__adaptive"></button>
+			<a class="GD-link__adaptive" href="#">Создание сайта- <span class="underline">GrandDesign</span></a>
+		</div>
+	</footer>
+
+	<div class="bg"></div>
+
+
+
+	<div class="player">
+		<button class="player__close-btn">&#10006;</button>
+		<iframe class="player__iframe" width="765" height="430" src="https://www.youtube.com/embed/-mNp3-UX9Qc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+
+
+	{{>forms}}
+
+
+	<button class="edit__btn"></button>
+	<button class="portfolio__btn"></button>
+	<button class="clients__btn"></button>
+	<button class="logo__btn"></button>
+
+
+	<div class="thank-you__container">
+		<div class="thank-you">
+			<button class="thank-you__btn">✖</button>
+			<p>Спасибо за заявку!</p>
+		</div>
+	</div>
+
+</body>
+
+</html>

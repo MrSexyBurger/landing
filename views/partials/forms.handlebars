@@ -1,0 +1,174 @@
+<div class="user__edit__container">
+	<div class="user__edit">
+		<div class="user__edit__top">
+			<div class="user__edit__categories">
+				<button class="user__edit__info active">Инфо</button>
+				<button class="user__edit__photo">Фото</button>
+				<button class="user__edit__video">Интро</button>
+				<button class="user__edit__bg">Фон</button>
+				<div class="user__edit__underline"></div>
+			</div>
+			<button class="user__edit__close-btn">&#10006;</button>
+		</div>
+
+		<form action="edit" method="POST" class="user__info__form">
+			<input type="text" name="name" placeholder="имя">
+			<input type="text" name="phone" placeholder="телефон">
+			<input type="text" name="vk" placeholder="vk">
+			<input type="text" name="email" placeholder="email">
+			<input type="text" name="password" placeholder="password">
+			<textarea placeholder="Обо мне"></textarea>
+			<input type="submit" value="Cохранить">
+		</form>
+
+		<form action="uploadphoto" method="POST" class="user__photo__form" enctype="multipart/form-data">
+			<div class="photo__preview"></div>
+			
+			<div class="photo__radial">
+				<input type="radio" id="photo__choice1" name="photo" value="photo__big" checked="">
+				<label for="photo__choice1">Фото для компьютеров</label>
+			</div>
+			<div class="photo__radial">
+				<input type="radio" id="photo__choice2" name="photo" value="photo__small">
+				<label for="photo__choice2">Фото для мобильных</label>
+			</div>
+
+			<div class="photo__inputs">
+				<label for="photo__input">Выбрать файл</label>
+				<label for="photo__submit">Загрузить</label>
+				<input id="photo__input" type="file" name="filedata" hidden="">
+				<input id="photo__submit" type="submit" name="Сохранить" hidden="">
+			</div>
+			
+		</form>
+
+		<form action="uploadintro" method="POST" class="user__intro__form" enctype="multipart/form-data">
+			<div class="intro__preview">
+				<video id="preview__video" autoplay="autoplay" muted></video>
+			</div>
+			<div class="intro__preview__controls">
+				<div class="progressbar">
+					<div class="progressbar__filler"></div>
+				</div>
+				<button type="button" id="play"></button>
+				<button type="button" id="pause"></button>
+				<button type="button" id="stop"></button>
+			</div>
+			
+			<div class="intro__inputs">
+				<label for="intro__input">Выбрать файл</label>
+				<label for="intro__submit">Загрузить</label>
+				<input id="intro__input" type="file" name="filedata" hidden="">
+				<input id="intro__submit" type="submit" name="Сохранить" hidden="">
+			</div>		
+		</form>
+
+
+
+		<form action="uploadphoto" method="POST" class="user__bg__form" id="user__bg__form" enctype="multipart/form-data">
+			<div class="bg__preview"></div>
+			
+			<div class="bg__radial__container">
+				<div class="bg__radial__L">
+					<div class="bg__radial">
+						<input type="radio" id="bg__choice1" name="bg" value="bg__intro" checked="">
+						<label for="photo__choice1">Интро (моб.)</label>
+					</div>
+
+					<div class="bg__radial">
+						<input type="radio" id="bg__choice2" name="bg" value="bg__advantage">
+						<label for="photo__choice2">Преимущества</label>
+					</div>
+				</div>
+			
+				<div class="bg__radial__R">
+					<div class="bg__radial">
+						<input type="radio" id="bg__choice3" name="bg" value="bg__feedback">
+						<label for="photo__choice1">Обратная связь</label>
+					</div>
+
+					<div class="bg__radial">
+						<input type="radio" id="bg__choice4" name="bg" value="bg__profolio">
+						<label for="photo__choice2">Портфолио</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="bg__inputs">
+				<label for="bg__input">Выбрать файл</label>
+				<label for="bg__submit">Загрузить</label>
+				<input id="bg__input" type="file" name="filedata" hidden="">
+				<input id="bg__submit" type="submit" name="Сохранить" hidden="">
+			</div>
+			
+		</form>
+
+
+	</div>
+</div>
+
+
+<div class="portfolio__edit__container">
+	<div class="portfolio__edit">
+		<div class="portfolio__edit__top">
+			<div class="portfolio__edit__title">Портфолио</div>
+			<button class="portfolio__edit__close-btn">&#10006;</button>
+		</div>
+		<form class="portfolio__form">
+			<div class="portfolio__preview"></div>
+			<input class="portfolio__video__input" type="text" name="src" placeholder="Ссылка на видео">
+			<div class="portfolio__inputs">
+				<label for="portfolio__input">Выбрать превью</label>
+				<label for="portfolio__submit">Сохранить</label>
+				<input id="portfolio__input" type="file" name="filedata" hidden="">
+				<input id="portfolio__submit" type="submit" name="Сохранить" hidden="">
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="clients__edit__container">
+	<div class="clients__edit">
+		<div class="clients__edit__top">
+			<div class="clients__edit__title">С нами работали</div>
+			<button class="clients__edit__close-btn">&#10006;</button>
+		</div>
+		<form class="clients__form">
+			<div class="clients__preview"></div>
+			<input class="clients__video__input" type="text" name="href" placeholder="Ссылка на клиента">
+			<div class="clients__inputs">
+				<label for="clients__input">Выбрать файл</label>
+				<label for="clients__submit">Сохранить</label>
+				<input id="clients__input" type="file" name="filedata" hidden="">
+				<input id="clients__submit" type="submit" name="Сохранить" hidden="">
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+
+
+<div class="logo__edit__container">
+	<div class="logo__edit">
+		<div class="logo__edit__top">
+			<div class="logo__edit__title">С нами работали</div>
+			<button class="logo__edit__close-btn">&#10006;</button>
+		</div>
+		<form class="logo__form">
+			<div class="logo__preview"></div>
+			<input class="logo__youtube__input" type="text" name="youtube" placeholder="Канал на youtube">
+			<div class="logo__inputs">
+				<label for="logo__input">Выбрать файл</label>
+				<label for="logo__submit">Сохранить</label>
+				<input id="logo__input" type="file" name="filedata" hidden="">
+				<input id="logo__submit" type="submit" name="Сохранить" hidden="">
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="inprogress"></div>
